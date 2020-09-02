@@ -37,6 +37,7 @@ function generatePassword() {
         master.push(specials)
       } else if (master.length === 0) {
         alert("Please select at least one character type for password generation");
+        break;
       }
 
       var password = "";
