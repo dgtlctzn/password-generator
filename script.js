@@ -10,5 +10,16 @@ function writePassword() {
 
 }
 
+var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+console.log(letters.length)
+
+function generatePassword() {
+  var master = [];
+  var characters = "`~!@#$%^&*()_-+={}[]|':;<>,.?/"
+  var digits = "0123456789"
+  var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
