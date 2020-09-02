@@ -16,7 +16,6 @@ function generatePassword() {
   var digits = "0123456789";
   var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  // var passLength = parseInt(prompt("How many characters would you like the password to contain?"));
   var correctLength = false;
   while (!correctLength) {
 
@@ -40,8 +39,16 @@ function generatePassword() {
         alert("Please select at least one character type for password generation");
       }
 
+      var c = "";
+      for (var i = 0; i < parseInt(passLength); i++) {
+        var randCharType = Math.floor(Math.random() * master.length);
+        var randCharLength = Math.floor(Math.random() * master[randCharType].length);
+
+        c += master[randCharType][randCharLength];
+      }
+
       correctLength = true;
-      
+
     } else if (passLength === null) {
       break;
     } else {
@@ -49,26 +56,10 @@ function generatePassword() {
     }
   }
   
-  console.log(passLength);
+  console.log("password length is: " + passLength);
+  console.log("Master array: " + master)
 
-  // var upperChoice = confirm("Do you want upper case letters in the password?");
-  // var lowerChoice = confirm("Do you want lower case letters in the password?");
-  // var digitChoice = confirm("Do you want numbers in the password?");
-  // var specialChoice = confirm("Do you want special characters in the password?");
-
-  // if (upperChoice) {
-  //   master.push(letters)
-  // } if (lowerChoice) {
-  //   master.push(letters.toLowerCase());
-  // } if (digitChoice) {
-  //   master.push(digits)
-  // } if (specialChoice) {
-  //   master.push(specials)
-  // } else if (master.length === 0) {
-  //   alert("Please select at least one character type for password generation");
-  // }
-
-  console.log(master)
+  return c
 }
 
 generateBtn.addEventListener("click", writePassword);
