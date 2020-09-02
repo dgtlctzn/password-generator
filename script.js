@@ -50,9 +50,9 @@ function generatePassword() {
         // selects a random number based on the userChoice array length
         var randCharType = Math.floor(Math.random() * userChoice.length);
         // selects a random number based on the length of the chosen character string      
-        var randCharLength = Math.floor(Math.random() * userChoice[randCharType].length);
+        var randCharIndex = Math.floor(Math.random() * userChoice[randCharType].length);
         // retrieves a random string within the array and a random character within that string
-        password += userChoice[randCharType][randCharLength];
+        password += userChoice[randCharType][randCharIndex];
       }
 
       correctLength = true;
