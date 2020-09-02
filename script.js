@@ -39,12 +39,12 @@ function generatePassword() {
         alert("Please select at least one character type for password generation");
       }
 
-      var c = "";
+      var password = "";
       for (var i = 0; i < parseInt(passLength); i++) {
         var randCharType = Math.floor(Math.random() * master.length);
         var randCharLength = Math.floor(Math.random() * master[randCharType].length);
 
-        c += master[randCharType][randCharLength];
+        password += master[randCharType][randCharLength];
       }
 
       correctLength = true;
@@ -59,7 +59,7 @@ function generatePassword() {
   console.log("password length is: " + passLength);
   console.log("Master array: " + master)
 
-  return c
+  return password;
 }
 
 generateBtn.addEventListener("click", writePassword);
