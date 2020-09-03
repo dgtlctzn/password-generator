@@ -2,6 +2,8 @@
 
 Password generation is an increasingly important part of internet security. Many websites only accept certain parameters for their passwords such as excluding special characters or only allowing lower case letters. 
 
+![Digital Marketing Meeting](03-javascript-homework-demo.png)
+
 I was tasked with creating a website that can generate a novel password depending on the user's needs. The following website takes the user's input in the form of prompts and confirms, and generates a random password. The user input accepts the following character types:
 * special characters ```~`!@#$%^&*()_-+={}[]|':;<>,.?/```
 * lower case letters ```a-z```
