@@ -46,14 +46,14 @@ function generatePassword() {
         break;
       }
 
-      var password = "";
+      var genPassword = "";
       for (var i = 0; i < parseInt(passLength); i++) {
         // selects a random number based on the userChoice array length
         var randCharType = Math.floor(Math.random() * userChoice.length);
         // selects a random number based on the length of the chosen character string      
         var randCharIndex = Math.floor(Math.random() * userChoice[randCharType].length);
         // retrieves a random string within the array and a random character within that string
-        password += userChoice[randCharType][randCharIndex];
+        genPassword += userChoice[randCharType][randCharIndex];
       }
 
       correctLength = true;
@@ -61,11 +61,11 @@ function generatePassword() {
     } else if (passLength === null) {
       break;
     } else {
-      alert("Please select a character length between 8 and 128 characters");
+      alert("Please select a numeric length between 8 and 128 characters");
     }
   }
 
-  return password;
+  return genPassword;
 }
 
 generateBtn.addEventListener("click", writePassword);
